@@ -1,6 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
@@ -14,33 +11,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+Problem Statement:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Side Menu:  We have a side menu on the left side that pops out and allows easy navigation between the different sections, this menu will slide in and out when the user clicks the button.
+2. On the right we have the procedural trainer sections, this will eventually be about 20 sections, each with a % of completion assigned to it, this will dynamically be updated based on how many procedures the user has completed.
+3. There is a sub section underneath that where we have the recent procedures the user has not scored 3 stars on yet and is able to quickly navigate to. This would scale to all started procedures.
+4. When we mouse the various sections over them would be great to have a hover effect and raise them slightly, for touch this is not as important.
+5. Once the user clicks into any of the procedural trainer sections they will arrive at the specific page which has all the steps. Once the first procedure is completed the next one will unlock, each of the procedures will have a 3 star rating and display the users score at the top. Once clicked it will show the brief of that page on the right side (this will always be whatever stage the user is on the first time its opened). Once they start the procedure it will take them to that procedure page.
+6. When the user clicks on this, we want the button to call a function in a different file and not in the same App.js. You can have a placeholder file for now with a message returned.
+The user will be able to scroll down and see all of the sections that are currently locked but will not be able to click them until they have completed the previous procedure.
+7. The circle completion in the procedures page should correspond to percentage of completion and take that as input.
+8. We ideally want the main menu to scale well vertically for the iPad and an iPhone in landscape orientation without having to zoom
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

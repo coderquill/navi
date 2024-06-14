@@ -23,32 +23,32 @@
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 8px; /* Slightly curved edges */
+    border-radius: 8px; 
     margin-bottom: 10px;
     position: relative;
   }
   
   .menu-item:hover {
     background: white;
-    color: #f90242; /* Change text color to red on hover */
+    color: #f90242; 
   }
   
   .icon-wrapper {
     margin-right: 10px;
-    display: none; /* Hide by default */
+    display: none; 
   }
   
   .menu-item:hover .icon-wrapper {
-    display: block; /* Show on hover */
+    display: block; 
   }
   
   .bullet-wrapper {
     margin-right: 10px;
-    display: block; /* Show by default */
+    display: block; 
   }
   
   .menu-item:hover .bullet-wrapper {
-    display: none; /* Hide on hover */
+    display: none; 
   }
   
   .custom-icon {
@@ -59,7 +59,7 @@
   
   .nav {
     flex-grow: 1;
-    margin-top: 60px; /* Add top margin to push the first menu item down */
+    margin-top: 60px; 
   }
   
   .logout-button {
@@ -68,16 +68,16 @@
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 8px; /* Slightly curved edges */
-    margin-top: 20px; /* Adjust the margin to place it higher */
+    border-radius: 8px; 
+    margin-top: 20px; 
   }
   
   .logout-button:hover {
     background: white;
-    color: #f90242; /* Change text color to red on hover */
+    color: #f90242;
   }
   
   .logout-button {
-    margin-bottom: 40px; /* Ensure the button moves up */
+    margin-bottom: 40px; 
   }
   
