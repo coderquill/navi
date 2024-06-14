@@ -43,9 +43,18 @@ Done. Raised effect on hovering over prcedure card:
 
 5. Once the user clicks into any of the procedural trainer sections they will arrive at the specific page which has all the steps. Once the first procedure is completed the next one will unlock, each of the procedures will have a 3 star rating and display the users score at the top. Once clicked it will show the brief of that page on the right side (this will always be whatever stage the user is on the first time its opened). Once they start the procedure it will take them to that procedure page.
 
+Done. 
+Slight modification in design: not curved connecting lines.
+ ![ Procedural section](ProcedureInfoPage.png)
+
 6. When the user clicks on this, we want the button to call a function in a different file and not in the same App.js. You can have a placeholder file for now with a message returned.
 The user will be able to scroll down and see all of the sections that are currently locked but will not be able to click them until they have completed the previous procedure.
+Done.
+
 7. The circle completion in the procedures page should correspond to percentage of completion and take that as input.
+Done. 
+Circle does correspond to the procedure %.
 
 8. We ideally want the main menu to scale well vertically for the iPad and an iPhone in landscape orientation without having to zoom
+Did not cross check but did take measures to make this possible. Can host it somewhere and crosscheck.
 
