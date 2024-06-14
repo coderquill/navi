@@ -1,0 +1,47 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  background: #f90242;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+}
+
+.menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.logo {
+  height: 40px;
+  margin-left: 10px;
+}
+
+.content {
+  margin-top: 60px; 
+  margin-left: 0;
+  padding: 20px;
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content.shifted {
+  margin-left: 220px; 
+}
+
+h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
