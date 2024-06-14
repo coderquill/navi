@@ -10,7 +10,7 @@ const DashboardContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #e3f2fd; /* Faint baby blue background */
-  padding: 20px;
+  padding-left: 40px;
   height: 100vh; /* Full viewport height */
   overflow: hidden; /* Prevent scrolling */
 `;
@@ -19,7 +19,7 @@ const CardsContainer = styled.div`
   display: flex;
   overflow-x: auto;
   padding: 20px;
-  gap: 20px; /* Add gap between cards */
+  gap: 30px; /* Add gap between cards */
   width: 100%; /* Full width */
   height: 40vh; /* Adjust height to take less of the viewport height */
   &::-webkit-scrollbar {
@@ -96,7 +96,7 @@ const Card = styled(Link)`
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Adjust width for a vertical rectangle shape */
+  width: 200px; /* Adjust width for a vertical rectangle shape */
   height: 100%; /* Adjust height to fill the container */
   flex-shrink: 0;
   position: relative;
@@ -240,7 +240,7 @@ const allRecentProcedures = [...recentProcedures, ...extendedRecentProcedures];
 const Dashboard: React.FC = () => {
   return (
     <DashboardContainer>
-      <h2>Procedural Trainer</h2>
+      <h1>Procedural Trainer</h1>
       <CardsContainer className="cards-container">
         {allCardDetails.map((card) => (
           <Card key={card.id} to={card.link}>

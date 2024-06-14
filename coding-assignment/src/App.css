@@ -9,7 +9,7 @@
 .top-bar {
   display: flex;
   align-items: center;
-  background: #ff3855;
+  background: #f90242;
   padding: 10px;
   position: fixed;
   top: 0;
@@ -33,7 +33,7 @@
 }
 
 .content {
-  margin-top: 60px; 
+  margin-top: 40px; 
   padding: 20px;
   width: 100%;
   height: calc(100% - 60px); 
@@ -54,7 +54,7 @@ h2 {
 /* Sidebar styles */
 .sidebar {
   width: 220px;
-  background: #ff3855;
+  background: #f90242;
   padding: 20px;
   position: fixed;
   height: 100vh;

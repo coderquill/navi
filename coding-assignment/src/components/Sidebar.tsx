@@ -4,12 +4,12 @@ import { FaUser, FaProcedures, FaClipboardList, FaChalkboardTeacher } from 'reac
 
 const SidebarContainer = styled.div<{ isVisible: boolean }>`
   width: 220px;
-  background: #ff3855;
+  background: #f90242;
   padding: 20px;
   position: fixed;
   height: 100vh;
   color: white;
-  left: ${({ isVisible }) => (isVisible ? '0' : '-600px')}; /* Fully hide the sidebar when not visible */
+  left: ${({ isVisible }) => (isVisible ? '0' : '-600px')};
   transition: left 0.3s ease-in-out;
   z-index: 1000;
 `;
