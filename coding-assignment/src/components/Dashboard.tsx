@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { FaArrowRight, FaStar } from 'react-icons/fa'; 
+import { FaArrowRight, FaStar } from 'react-icons/fa'; // Import necessary icons
 import card1 from '../images/card1.png';
 import card2 from '../images/card2.png';
 import card3 from '../images/card3.png';
@@ -11,27 +11,27 @@ const DashboardContainer = styled.div`
   flex-direction: column;
   background-color: #e3f2fd; /* Faint baby blue background */
   padding: 20px;
-  height: 100vh; 
-  overflow: hidden; 
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent scrolling */
 `;
 
 const CardsContainer = styled.div`
   display: flex;
   overflow-x: auto;
   padding: 20px;
-  gap: 25px; 
-  width: 100%; 
-  height: 40vh; 
+  gap: 20px; /* Add gap between cards */
+  width: 100%; /* Full width */
+  height: 40vh; /* Adjust height to take less of the viewport height */
   &::-webkit-scrollbar {
-    height: 6px;  
-    background: #cfd8dc;  
+    height: 6px;  /* Thin scrollbar */
+    background: #cfd8dc;  /* Scrollbar background color (slightly darker) */
   }
   &::-webkit-scrollbar-thumb {
-    background: #90a4ae; 
+    background: #90a4ae; /* Thumb color */
     border-radius: 3px;
   }
   &::-webkit-scrollbar-thumb:hover {
-    background: #607d8b; 
+    background: #607d8b; /* Thumb color on hover */
   }
 `;
 
@@ -39,20 +39,20 @@ const RecentProceduresContainer = styled.div`
   display: flex;
   overflow-x: auto;
   padding: 20px;
-  gap: 25px; 
-  width: 100%; 
-  scrollbar-width: none; 
+  gap: 20px; /* Add gap between cards */
+  width: 100%; /* Full width */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
   &::-webkit-scrollbar {
-    display: none; 
+    display: none; /* Hide scrollbar for WebKit browsers */
   }
 `;
 
 const RecentProcedureCard = styled(Link)`
-  background: #f5f5f5;
+  background: #f5f5f5; /* Light gray background */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 150px; 
-  height: 120px; 
+  width: 150px; /* Smaller width */
+  height: 120px; /* Smaller height */
   flex-shrink: 0;
   position: relative;
   text-decoration: none;
@@ -86,9 +86,9 @@ const StarsContainer = styled.div`
 `;
 
 const Star = styled(FaStar)`
-  color: #dcdcdc; 
+  color: #dcdcdc; /* Gray color for empty stars */
   &.filled {
-    color: #ffffff; 
+    color: #ffffff; /* White color for filled stars */
   }
 `;
 
@@ -96,8 +96,8 @@ const Card = styled(Link)`
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; 
-  height: 100%; 
+  width: 300px; /* Adjust width for a vertical rectangle shape */
+  height: 100%; /* Adjust height to fill the container */
   flex-shrink: 0;
   position: relative;
   text-decoration: none;
@@ -127,9 +127,9 @@ const CardImage = styled.div<{ backgroundImage: string }>`
 const CardContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-  height: 40%; 
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+  height: 40%; /* Start slightly below the middle */
 `;
 
 const CompletionPercentage = styled.div`
@@ -156,8 +156,8 @@ const CardSubtitle = styled.p`
 
 const CardIcons = styled.div`
   display: flex;
-  justify-content: center; 
-  gap: 20px; 
+  justify-content: center; /* Center the icons */
+  gap: 20px; /* Space out the icons */
   margin-top: 10px;
 `;
 

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Dashboard from './components/Dashboard'; 
-import ProceduralTrainer from './components/ProceduralTrainer'; 
+// import ProceduralTrainer from './components/ProceduralTrainer'; 
+import ProcedurePage from './components/ProcedurePage'; 
 import { FaBars } from 'react-icons/fa';
 import './App.css'; 
 
@@ -29,7 +30,8 @@ const App: React.FC = () => {
         <div className={`content ${sidebarVisible ? 'shifted' : ''}`}>
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/procedure/:id" element={<ProceduralTrainer />} />
+            {/* <Route path="/procedure/:id" element={<ProceduralTrainer />} /> */}
+            <Route path="/procedure/:id" element={<ProcedurePage />} />
             <Route path="/" element={<Navigate to="/dashboard" />} />
           </Routes>
         </div>
