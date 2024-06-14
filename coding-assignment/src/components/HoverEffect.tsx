@@ -1,6 +1,3 @@
-// src/components/HoverEffect.tsx
-
-// Add this line to make it a module
 export {};
 
 import React, { ReactNode } from 'react';

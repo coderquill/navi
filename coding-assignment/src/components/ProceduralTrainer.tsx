@@ -1,48 +1,40 @@
-// src/components/ProceduralTrainer.tsx
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 const TrainerContainer = styled.div`
-  margin-left: 220px;
   padding: 20px;
 `;
 
-const Section = styled.div`
+const Step = styled.div`
   margin-bottom: 20px;
-  transition: transform 0.2s;
-  &:hover {
-    transform: scale(1.05);
-  }
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
 `;
 
-const ProceduralTrainer: React.FC = () => (
-  <TrainerContainer>
-    <h2>Procedural Trainer</h2>
-    <div>
-      <Section>
-        <Link to="/procedure/1">
-          <img src="/path/to/emergency-procedures.png" alt="Emergency Procedures" />
-          <p>Emergency Procedures</p>
-          <span>50%</span>
-        </Link>
-      </Section>
-      <Section>
-        <Link to="/procedure/2">
-          <img src="/path/to/pre-flight-procedures.png" alt="Pre-Flight Procedures" />
-          <p>Pre-Flight Procedures</p>
-          <span>0%</span>
-        </Link>
-      </Section>
-      <Section>
-        <Link to="/procedure/3">
-          <img src="/path/to/cfi.png" alt="CFI" />
-          <p>CFI</p>
-          <span>0%</span>
-        </Link>
-      </Section>
-    </div>
-  </TrainerContainer>
-);
+const ProceduralTrainer: React.FC = () => {
+  const { id } = useParams<{ id: string }>();
+
+  const steps = [
+    { id: 1, title: 'Step 1: Preparation', description: 'Description for step 1' },
+    { id: 2, title: 'Step 2: Action', description: 'Description for step 2' },
+    { id: 3, title: 'Step 3: Review', description: 'Description for step 3' }
+    // Add more steps as needed
+  ];
+
+  return (
+    <TrainerContainer>
+      <h2>Procedure {id}</h2>
+      {steps.map(step => (
+        <Step key={step.id}>
+          <h3>{step.title}</h3>
+          <p>{step.description}</p>
+        </Step>
+      ))}
+    </TrainerContainer>
+  );
+};
 
 export default ProceduralTrainer;

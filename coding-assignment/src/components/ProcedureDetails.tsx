@@ -1,4 +1,3 @@
-// src/components/ProcedureDetails.tsx
 import React from 'react';
 
 interface ProcedureDetailsProps {

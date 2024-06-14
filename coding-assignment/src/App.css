@@ -1,12 +1,15 @@
+/* src/App.css */
 .app-container {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .top-bar {
   display: flex;
   align-items: center;
-  background: #f90242;
+  background: #ff3855;
   padding: 10px;
   position: fixed;
   top: 0;
@@ -31,10 +34,12 @@
 
 .content {
   margin-top: 60px; 
-  margin-left: 0;
   padding: 20px;
   width: 100%;
+  height: calc(100% - 60px); 
   transition: margin-left 0.3s ease-in-out;
+  background-color: #e3f2fd; 
+  overflow-y: auto; 
 }
 
 .content.shifted {
@@ -44,4 +49,43 @@
 h2 {
   font-size: 18px;
   margin: 10px 0;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 220px;
+  background: #ff3855;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  color: white;
+  left: -220px; 
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.visible {
+  left: 0; 
+}
+
+/* Show scrollbar */
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px; 
+  height: 66.67%; 
+}
+
+.cards-container::-webkit-scrollbar {
+  height: 6px;  
+  background: #cfd8dc; 
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #90a4ae; 
+  border-radius: 3px;
+}
+
+.cards-container::-webkit-scrollbar-thumb:hover {
+  background: #607d8b; 
 }
