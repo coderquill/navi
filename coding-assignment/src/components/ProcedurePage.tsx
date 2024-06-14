@@ -67,6 +67,7 @@ const StepCircle = styled.div<{ isActive: boolean }>`
   position: absolute;
   top: 20px; 
   left: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
 `;
 
 const StepDetails = styled.div`
@@ -104,7 +105,6 @@ const ContentContainer = styled.div`
   justify-content: space-between;
   align-self: center;
   margin: 0 auto; /* Center it horizontally */
-  margin-top: 20px; /* Add some margin at the top */
 `;
 
 const CompletionPercentage = styled.div`
@@ -112,10 +112,10 @@ const CompletionPercentage = styled.div`
   align-items: center;
   margin-bottom: 20px;
   font-size: 16px;
+`;
 
-  ${StarsContainer} {
-    margin-right: 10px; /* Add margin to separate stars and percentage */
-  }
+const PercentageText = styled.span`
+  margin-left: 10px; /* Add distance between the stars and percentage */
 `;
 
 const Heading = styled.h2`
@@ -325,7 +325,7 @@ const ProcedurePage: React.FC<ProcedurePageProps> = ({ procedureId }) => {
                 <StarIcon key={index} filled={index < steps[0].stars} />
               ))}
             </StarsContainer>
-            <span style={{ marginLeft: '10px' }}>{steps[0].percentage}%</span>
+            <PercentageText>{steps[0].percentage}%</PercentageText> {/* Added spacing */}
           </CompletionPercentage>
           <Heading>{steps[0].title}</Heading>
           <Subheading>{steps[0].subtitle}</Subheading>
